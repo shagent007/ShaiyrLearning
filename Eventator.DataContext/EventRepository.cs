@@ -30,21 +30,26 @@ namespace Eventator.DataContext
             });
         }
 
+        private Event CreateEvent(SqlDataReader dataReader)
+        {
+            while (dataReader.Read())
+            {
+                Event _event = new Event();
+                _event.Id = dataReader.GetInt32(0);
+                _event.Name = dataReader.GetString(1);
+                _event.Description = dataReader.GetString(2);
+                return _event;
+            }
+            return null;
+        }
+
         public Event Get(int id)
         {
             return _dataBaseExecutor.Execute<Event>(connection =>
             {
                 SqlCommand command = new SqlCommand($"SELECT * FROM Event WHERE Id={id}", connection);
                 SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Event _event = new Event();
-                    _event.Id = reader.GetInt32(0);
-                    _event.Name = reader.GetString(1);
-                    _event.Description = reader.GetString(2);
-                    return _event;
-                }
-                return null;
+                return CreateEvent(reader);
             });
         }
 

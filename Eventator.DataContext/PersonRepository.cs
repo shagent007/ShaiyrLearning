@@ -31,21 +31,26 @@ namespace Eventator.DataContext
             });
         }
 
+        private Person CreatePerson(SqlDataReader dataReader)
+        {
+            while (dataReader.Read())
+            {
+                Person person = new Person();
+                person.Id = dataReader.GetInt32(0);
+                person.Age = dataReader.GetInt32(1);
+                person.Name = dataReader.GetString(2);
+                return person;
+            }
+            return null;
+        }
+
         public Person Get(int id)
         {
             return _dataBaseExecutor.Execute<Person>(connection =>
             {
                 SqlCommand command = new SqlCommand($"SELECT * FROM Person WHERE Id={id}", connection);
                 SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Person person = new Person();
-                    person.Id = reader.GetInt32(0);
-                    person.Age = reader.GetInt32(1);
-                    person.Name = reader.GetString(2);
-                    return person;
-                }
-                return null;
+                return CreatePerson(reader);
             });
         }
 
