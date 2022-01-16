@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "98036931-095c-4c30-8c05-5dcaee9250cd": {
+      "ProjectGuid": "98036931-095c-4c30-8c05-5dcaee9250cd",
+      "DisplayName": "Eventator.Host",
+      "ColorIndex": 0
+    },
+    "aa7ea2be-2356-42a6-970d-ac504a8bcdb4": {
+      "ProjectGuid": "aa7ea2be-2356-42a6-970d-ac504a8bcdb4",
+      "DisplayName": "Eventator.Domain",
+      "ColorIndex": 1
+    },
+    "42635218-50a6-4ed3-ba69-83b24eaff1b5": {
+      "ProjectGuid": "42635218-50a6-4ed3-ba69-83b24eaff1b5",
+      "DisplayName": "Eventator.DataContext",
+      "ColorIndex": 2
+    },
+    "a0ade4dc-7b8d-4efb-8a93-9ad9b819b6c1": {
+      "ProjectGuid": "a0ade4dc-7b8d-4efb-8a93-9ad9b819b6c1",
+      "DisplayName": "Eventator.Repository",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

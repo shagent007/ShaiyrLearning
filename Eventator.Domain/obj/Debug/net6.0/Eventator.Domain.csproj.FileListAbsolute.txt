@@ -1,0 +1,12 @@
+D:\Документы\учёба\Eventator\Eventator.Domain\bin\Debug\net6.0\Eventator.Domain.deps.json
+D:\Документы\учёба\Eventator\Eventator.Domain\bin\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.Domain\bin\Debug\net6.0\ref\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.Domain\bin\Debug\net6.0\Eventator.Domain.pdb
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.csproj.AssemblyReference.cache
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.AssemblyInfoInputs.cache
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.AssemblyInfo.cs
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.csproj.CoreCompileInputs.cache
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\ref\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.Domain\obj\Debug\net6.0\Eventator.Domain.pdb

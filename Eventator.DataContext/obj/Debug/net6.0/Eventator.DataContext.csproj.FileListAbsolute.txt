@@ -1,0 +1,15 @@
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\Eventator.DataContext.deps.json
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\Eventator.DataContext.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\ref\Eventator.DataContext.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\Eventator.DataContext.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext\bin\Debug\net6.0\Eventator.Domain.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.csproj.AssemblyReference.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.AssemblyInfoInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.AssemblyInfo.cs
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.csproj.CoreCompileInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.csproj.CopyComplete
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\ref\Eventator.DataContext.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext\obj\Debug\net6.0\Eventator.DataContext.pdb
