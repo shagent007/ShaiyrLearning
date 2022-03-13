@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A3K++GxcbPCCinAGOwnAtIiub2kjExBCOCLVQ6LdTvQX406gRI8lQRBbYx9l+udvf+J7hbuzFCGaG3aSWMkLOQ==",
+  "dgSpecHash": "/W5eD0yN4FQr7UWQy6NEV0beuEBTUpofj0iqxP1EB2uacN8bslCDmAb6L4f/B3bckhND+r6wv4nV3MuJ7hT9Dw==",
   "success": true,
   "projectFilePath": "D:\\Документы\\учёба\\Eventator\\Eventator.Host\\Eventator.Host.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient\\4.0.0\\microsoft.data.sqlclient.4.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\microsoft.data.sqlclient.4.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\4.0.0\\microsoft.data.sqlclient.sni.runtime.4.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identity.client\\4.22.0\\microsoft.identity.client.4.22.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\2.16.5\\microsoft.identity.client.extensions.msal.2.16.5.nupkg.sha512",

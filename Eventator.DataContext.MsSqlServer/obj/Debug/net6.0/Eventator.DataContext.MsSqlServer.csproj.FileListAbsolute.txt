@@ -1,0 +1,15 @@
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\Eventator.DataContext.MsSqlServer.deps.json
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\Eventator.DataContext.MsSqlServer.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\ref\Eventator.DataContext.MsSqlServer.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\Eventator.DataContext.MsSqlServer.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\bin\Debug\net6.0\Eventator.Domain.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.csproj.AssemblyReference.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.AssemblyInfoInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.AssemblyInfo.cs
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.csproj.CoreCompileInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.csproj.CopyComplete
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\ref\Eventator.DataContext.MsSqlServer.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.MsSqlServer\obj\Debug\net6.0\Eventator.DataContext.MsSqlServer.pdb

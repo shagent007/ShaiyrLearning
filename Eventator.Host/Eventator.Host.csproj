@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eventator.DataContext\Eventator.DataContext.csproj" />
+    <ProjectReference Include="..\Eventator.DataContext.Json\Eventator.DataContext.Json.csproj" />
+    <ProjectReference Include="..\Eventator.DataContext.MsSqlServer\Eventator.DataContext.MsSqlServer.csproj" />
+    <ProjectReference Include="..\Eventator.DataContext.Xml\Eventator.DataContext.Xml.csproj" />
+    <ProjectReference Include="..\Eventator.Domain\Eventator.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Eventator.DataContext.Xml/1.0.0": {
+        "dependencies": {
+          "Eventator.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Eventator.DataContext.Xml.dll": {}
+        }
+      },
+      "Eventator.Domain/1.0.0": {
+        "runtime": {
+          "Eventator.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Eventator.DataContext.Xml/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Eventator.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

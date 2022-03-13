@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ptRKXWK+WamjGVTQvBSbVQ0aAuknwjhDFRtNX2WyOgY=",
+  "Source": "Eventator.Api",
+  "BasePath": "_content/Eventator.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

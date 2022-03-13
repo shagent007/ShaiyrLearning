@@ -1,0 +1,15 @@
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\Eventator.DataContext.Json.deps.json
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\Eventator.DataContext.Json.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\ref\Eventator.DataContext.Json.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\Eventator.DataContext.Json.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.csproj.AssemblyReference.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.AssemblyInfoInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.AssemblyInfo.cs
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.csproj.CoreCompileInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\ref\Eventator.DataContext.Json.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\bin\Debug\net6.0\Eventator.Domain.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.Json\obj\Debug\net6.0\Eventator.DataContext.Json.csproj.CopyComplete

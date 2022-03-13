@@ -1,0 +1,15 @@
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\Eventator.DataContext.Xml.deps.json
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\Eventator.DataContext.Xml.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\ref\Eventator.DataContext.Xml.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\Eventator.DataContext.Xml.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\Eventator.Domain.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\bin\Debug\net6.0\Eventator.Domain.pdb
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.csproj.AssemblyReference.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.GeneratedMSBuildEditorConfig.editorconfig
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.AssemblyInfoInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.AssemblyInfo.cs
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.csproj.CoreCompileInputs.cache
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.csproj.CopyComplete
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\ref\Eventator.DataContext.Xml.dll
+D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\obj\Debug\net6.0\Eventator.DataContext.Xml.pdb

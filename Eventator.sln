@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.Host", "Eventator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.Domain", "Eventator.Domain\Eventator.Domain.csproj", "{AA7EA2BE-2356-42A6-970D-AC504A8BCDB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.DataContext", "Eventator.DataContext\Eventator.DataContext.csproj", "{42635218-50A6-4ED3-BA69-83B24EAFF1B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.Api", "Eventator.Api\Eventator.Api.csproj", "{C33F3182-0BBF-42D8-90DA-35BDD0C50CF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.DataContext.MsSqlServer", "Eventator.DataContext.MsSqlServer\Eventator.DataContext.MsSqlServer.csproj", "{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventator.DataContext.Json", "Eventator.DataContext.Json\Eventator.DataContext.Json.csproj", "{82E09364-7EEB-49DB-8F16-72F716E80544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventator.DataContext.Xml", "Eventator.DataContext.Xml\Eventator.DataContext.Xml.csproj", "{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +29,22 @@ Global
 		{AA7EA2BE-2356-42A6-970D-AC504A8BCDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7EA2BE-2356-42A6-970D-AC504A8BCDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7EA2BE-2356-42A6-970D-AC504A8BCDB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42635218-50A6-4ED3-BA69-83B24EAFF1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42635218-50A6-4ED3-BA69-83B24EAFF1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42635218-50A6-4ED3-BA69-83B24EAFF1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42635218-50A6-4ED3-BA69-83B24EAFF1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33F3182-0BBF-42D8-90DA-35BDD0C50CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33F3182-0BBF-42D8-90DA-35BDD0C50CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33F3182-0BBF-42D8-90DA-35BDD0C50CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33F3182-0BBF-42D8-90DA-35BDD0C50CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E09364-7EEB-49DB-8F16-72F716E80544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E09364-7EEB-49DB-8F16-72F716E80544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E09364-7EEB-49DB-8F16-72F716E80544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E09364-7EEB-49DB-8F16-72F716E80544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

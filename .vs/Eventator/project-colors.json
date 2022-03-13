@@ -20,7 +20,32 @@
       "ProjectGuid": "a0ade4dc-7b8d-4efb-8a93-9ad9b819b6c1",
       "DisplayName": "Eventator.Repository",
       "ColorIndex": 3
+    },
+    "e1d3214b-6b75-492b-9472-7db023eb9271": {
+      "ProjectGuid": "e1d3214b-6b75-492b-9472-7db023eb9271",
+      "DisplayName": "Eventator.Api",
+      "ColorIndex": 4
+    },
+    "c33f3182-0bbf-42d8-90da-35bdd0c50cf2": {
+      "ProjectGuid": "c33f3182-0bbf-42d8-90da-35bdd0c50cf2",
+      "DisplayName": "Eventator.Api",
+      "ColorIndex": 5
+    },
+    "78687d4f-6f3c-436a-98d4-a0ba8774ab1c": {
+      "ProjectGuid": "78687d4f-6f3c-436a-98d4-a0ba8774ab1c",
+      "DisplayName": "Eventator.DataContext.MsSqlServer",
+      "ColorIndex": 6
+    },
+    "82e09364-7eeb-49db-8f16-72f716e80544": {
+      "ProjectGuid": "82e09364-7eeb-49db-8f16-72f716e80544",
+      "DisplayName": "Eventator.DataContext.Json",
+      "ColorIndex": 7
+    },
+    "1ce52e8e-aa7a-49b4-92c2-1e5d152ef151": {
+      "ProjectGuid": "1ce52e8e-aa7a-49b4-92c2-1e5d152ef151",
+      "DisplayName": "Eventator.DataContext.Xml",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 9
 }

@@ -4,14 +4,76 @@
     "D:\\Документы\\учёба\\Eventator\\Eventator.Host\\Eventator.Host.csproj": {}
   },
   "projects": {
-    "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\Eventator.DataContext.csproj": {
+    "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\Eventator.DataContext.Json.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\Eventator.DataContext.csproj",
-        "projectName": "Eventator.DataContext",
-        "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\Eventator.DataContext.csproj",
+        "projectUniqueName": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\Eventator.DataContext.Json.csproj",
+        "projectName": "Eventator.DataContext.Json",
+        "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\Eventator.DataContext.Json.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\obj\\",
+        "outputPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\Eventator.DataContext.MsSqlServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\Eventator.DataContext.MsSqlServer.csproj",
+        "projectName": "Eventator.DataContext.MsSqlServer",
+        "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\Eventator.DataContext.MsSqlServer.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,9 +112,71 @@
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[4.0.0, )"
+              "version": "[4.1.0, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\Eventator.DataContext.Xml.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\Eventator.DataContext.Xml.csproj",
+        "projectName": "Eventator.DataContext.Xml",
+        "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\Eventator.DataContext.Xml.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -158,8 +282,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\Eventator.DataContext.csproj": {
-                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext\\Eventator.DataContext.csproj"
+              "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\Eventator.DataContext.Json.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Json\\Eventator.DataContext.Json.csproj"
+              },
+              "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\Eventator.DataContext.MsSqlServer.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.MsSqlServer\\Eventator.DataContext.MsSqlServer.csproj"
+              },
+              "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\Eventator.DataContext.Xml.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.DataContext.Xml\\Eventator.DataContext.Xml.csproj"
+              },
+              "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj": {
+                "projectPath": "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj"
               }
             }
           }
