@@ -27,7 +27,7 @@ namespace Eventator.Host
             return answer == "y";
         }
 
-        public static string String(string question, string errorMessage, bool validate = true)
+        public static string String(string question, string errorMessage = "Поле не может быть пустым", bool validate = true)
         {
             string answer;
             bool isValidAnswer;

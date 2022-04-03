@@ -1,4 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Eventator.Domain;
+using Eventator.Domain.Exeptions;
+using Microsoft.Data.SqlClient;
 
 namespace Eventator.DataContext.MsSqlServer
 {
@@ -6,9 +8,9 @@ namespace Eventator.DataContext.MsSqlServer
     {
         private readonly string _connectionString;
 
-        public MsSqlDataBaseExecutor(string connectionString)
+        public MsSqlDataBaseExecutor(ConnectionStringProvider provider)
         {
-            _connectionString = connectionString;
+            _connectionString = provider.GetConnectionString();
         }
 
         public TResult Execute<TResult>(Func<SqlConnection, TResult> function)
@@ -35,7 +37,7 @@ namespace Eventator.DataContext.MsSqlServer
             {
                 var command = new SqlCommand(sqlCommand, connection);
                 var reader = command.ExecuteReader();
-                if (!reader.HasRows) return default(TResult);
+                if (!reader.HasRows) throw new NotFoundExeption();
                 reader.Read();
                 return function(reader);
             });
@@ -59,12 +61,25 @@ namespace Eventator.DataContext.MsSqlServer
             });
         }
 
-        public void Write(string sqlCommand)
+        public TId Insert<TId>(string insertSql)
         {
-           Execute(connection =>
+            return Execute(connection =>
             {
-                var command = new SqlCommand(sqlCommand, connection);
-                command.ExecuteNonQuery();
+                var command = new SqlCommand(insertSql, connection);
+                command.Connection = connection;
+                    var result = (TId)command.ExecuteScalar();
+                return result;
+            });
+        }
+
+        public int Update(string updateSql)
+        {
+            return Execute(connection =>
+            {
+                var command = new SqlCommand(updateSql, connection);
+                command.Connection = connection;
+                var affectedRows = command.ExecuteNonQuery();
+                return affectedRows;
             });
         }
     }

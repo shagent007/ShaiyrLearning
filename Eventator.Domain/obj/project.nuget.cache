@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "am5kvxJGf5Mh6SPAzOwTWUt1QusLr2wwHFawznzeiwReelE+8Y8znwXYO1rwYfbLgbqjGTAER1btHac+NPOEXg==",
+  "dgSpecHash": "uv+ijAC3wc20weujBtvhQpEyc96ASeytufSmnwmeoW92nho5jybKc6DHmT+tbDwa57SG+pdsVXHf14z/uxJBgw==",
   "success": true,
   "projectFilePath": "D:\\Документы\\учёба\\Eventator\\Eventator.Domain\\Eventator.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

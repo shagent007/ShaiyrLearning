@@ -45,7 +45,17 @@
       "ProjectGuid": "1ce52e8e-aa7a-49b4-92c2-1e5d152ef151",
       "DisplayName": "Eventator.DataContext.Xml",
       "ColorIndex": 8
+    },
+    "ce2f4bd5-c882-4047-96b9-c5824c301035": {
+      "ProjectGuid": "ce2f4bd5-c882-4047-96b9-c5824c301035",
+      "DisplayName": "Eventator.FileManager",
+      "ColorIndex": 9
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 10
 }

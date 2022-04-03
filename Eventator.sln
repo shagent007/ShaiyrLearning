@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.Api", "Eventator.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.DataContext.MsSqlServer", "Eventator.DataContext.MsSqlServer\Eventator.DataContext.MsSqlServer.csproj", "{78687D4F-6F3C-436A-98D4-A0BA8774AB1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventator.DataContext.Json", "Eventator.DataContext.Json\Eventator.DataContext.Json.csproj", "{82E09364-7EEB-49DB-8F16-72F716E80544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.DataContext.Json", "Eventator.DataContext.Json\Eventator.DataContext.Json.csproj", "{82E09364-7EEB-49DB-8F16-72F716E80544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventator.DataContext.Xml", "Eventator.DataContext.Xml\Eventator.DataContext.Xml.csproj", "{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventator.DataContext.Xml", "Eventator.DataContext.Xml\Eventator.DataContext.Xml.csproj", "{1CE52E8E-AA7A-49B4-92C2-1E5D152EF151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

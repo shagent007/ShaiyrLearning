@@ -54,3 +54,5 @@ D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Event
 D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Eventator.DataContext.MsSqlServer.pdb
 D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Eventator.DataContext.Xml.dll
 D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Eventator.DataContext.Xml.pdb
+D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Документы\учёба\Eventator\Eventator.Host\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

@@ -12,9 +12,9 @@ namespace Eventator.DataContext.MsSqlServer
             _dataManager = dataManager;
         }
 
-        private Event LoadSchedules(ref Event _event)
+        private Event LoadSchedules(Event _event)
         {
-            var _schedules = _dataManager.GetSchedulesByField(nameof(Schedule.EventId), _event.Id.ToString());
+            var _schedules = _dataManager.GetSchedules(nameof(Schedule.EventId), _event.Id.ToString());
             foreach (var schedule in _schedules)
             {
                 _event.Schedules.Add(schedule);
@@ -24,34 +24,34 @@ namespace Eventator.DataContext.MsSqlServer
 
         public void Add(Event model)
         {
-            _dataManager.Write($"INSERT INTO {nameof(Event)} ({nameof(Event.Name)}, {nameof(Event.Description)}) VALUES ('{model.Name}', '{model.Description}')");
+            _dataManager.AddEvent(model);
         }
 
         public void Delete(int id)
         {
-            _dataManager.Write($"DELETE {nameof(Event)} WHERE {nameof(Event.Id)}={id}");
+            _dataManager.Delete<Event>(id);
         }
 
         public void Update(Event model)
         {
-            _dataManager.Write($"UPDATE {nameof(Event)} SET {nameof(Event.Description)}='{model.Description}',{nameof(Event.Name)}='{model.Name}' WHERE {nameof(Event.Id)}={model.Id}");
+            _dataManager.UpdateEvent(model);
         }
 
         public Event GetById(int id)
         {
-            var _event = _dataManager.GetEventByField(nameof(Event.Id), id.ToString());
-            return LoadSchedules(ref _event);
+            var _event = _dataManager.GetEvent(nameof(Event.Id), id.ToString());
+            return LoadSchedules( _event);
         }
 
         public Event GetByName(string name)
         {
-            var _event = _dataManager.GetEventByField(nameof(Event.Name), name);
-            return LoadSchedules(ref _event);
+            var _event = _dataManager.GetEvent(nameof(Event.Name), name);
+            return LoadSchedules( _event);
         }
 
         public List<Event> GetList()
         {
-            return _dataManager.GetEventList();
+            return _dataManager.GetEvents();
         }
     }
 }

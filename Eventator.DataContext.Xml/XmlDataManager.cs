@@ -1,10 +1,6 @@
-﻿using Eventator.DataContext.Xml.Factories;
+﻿using Eventator.Domain;
 using Eventator.Domain.Entities;
 using Eventator.Domain.Exeptions;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Unicode;
 using System.Xml.Serialization;
 
 namespace Eventator.DataContext.Xml
@@ -16,12 +12,13 @@ namespace Eventator.DataContext.Xml
         private readonly string _eventDirName;
         private readonly string _offerDirName;
 
-        public XmlDataManager(string rootDirName)
+        public XmlDataManager(ConnectionStringProvider provider)
         {
-            _personDirName = $@"{rootDirName}\Persons";
-            _scheduleDirName = $@"{rootDirName}\Schedules";
-            _eventDirName = $@"{rootDirName}\Events";
-            _offerDirName = $@"{rootDirName}\Offers";
+            var _rootDirName = provider.GetConnectionString();
+            _personDirName = $@"{_rootDirName}\Persons";
+            _scheduleDirName = $@"{_rootDirName}\Schedules";
+            _eventDirName = $@"{_rootDirName}\Events";
+            _offerDirName = $@"{_rootDirName}\Offers";
 
             var _directories = new List<string>()
             {
@@ -45,7 +42,8 @@ namespace Eventator.DataContext.Xml
             nameof(Person) => _personDirName,
             nameof(Schedule) => _scheduleDirName,
             nameof(Event) => _eventDirName,
-            nameof(Offer) => _offerDirName
+            nameof(Offer) => _offerDirName,
+            _ => throw new NotFoundExeption()
         };
         
 
@@ -88,75 +86,73 @@ namespace Eventator.DataContext.Xml
             File.Delete($"{_dirName}/{enityId}.xml");
         }
 
-        public Person GetPerson(string fieldName, string fieldValue)
+        public EntityClass GetEntity<EntityClass>(string fieldName, string fieldValue) where EntityClass : Entity
         {
-            var _factory = new PersonFactory();
-            var _files  = Directory.GetFiles(_personDirName);
+            var _dirName = GetEntityDirName(typeof(EntityClass).Name);
+            var _files = Directory.GetFiles(_dirName);
             if (_files.Length == 0)
-                throw new PersonNotFoundExeption();
-            Person? _person = null;
+                throw new FileNotFoundException();
+
+            EntityClass? _entity = null;
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(EntityClass));
             foreach (string filePath in _files)
             {
-                try
+                using (FileStream fs = File.OpenRead(filePath))
                 {
-                    Person person = _factory.Create(filePath);
-                    string? value = person?.GetType()
-                        ?.GetProperty(fieldName)
-                        ?.GetValue(person, null)?.ToString();
-                    if (value == fieldValue)
-                    {
-                        _person = person;
-                    }
+                    _entity = xmlSerializer.Deserialize(fs) as EntityClass;
                 }
-                catch (InvalidPersonExeption)
+
+                string? value = _entity?.GetType()
+                   ?.GetProperty(fieldName)
+                   ?.GetValue(_entity, null)?.ToString();
+
+                if (_entity != null && value == fieldValue)
                 {
-                    continue;
+                    return _entity;
                 }
-            }
-            if (_person == null)
-            {
-                throw new PersonNotFoundExeption();
             }
 
-            return _person;
+            throw new FileNotFoundException();
         }
 
-        public List<Person> GetPeople(string? fieldName=null, string? fieldValue=null)
+        public List<EntityClass> GetEntities<EntityClass>(string? fieldName = null, string? fieldValue = null) where EntityClass : Entity
         {
-            var _factory = new PersonFactory();
-            var list = new List<Person>();
-            var _files = Directory.GetFiles(_personDirName);
+            var list = new List<EntityClass>();
+            var _dirName = GetEntityDirName(typeof(EntityClass).Name);
+            var _files = Directory.GetFiles(_dirName);
             if (_files.Length == 0) return list;
-
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(EntityClass));
             foreach (string filePath in _files)
             {
-                try
+                EntityClass? _entity;
+               
+                using (FileStream fs = File.OpenRead(filePath))
                 {
-                    Person person = _factory.Create(filePath);
+                    _entity = xmlSerializer.Deserialize(fs) as EntityClass;
+                }
 
-                    if (fieldName != null && fieldValue != null)
+                if (_entity == null) continue;
+
+                if (fieldName != null && fieldValue != null)
+                {
+                    var value = _entity.GetType()
+                        ?.GetProperty(fieldName)
+                        ?.GetValue(_entity, null)?.ToString();
+                    if (value == fieldValue)
                     {
-                        var value = person.GetType()
-                            ?.GetProperty(fieldName)
-                            ?.GetValue(person, null)?.ToString();
-                        if (value == fieldValue)
-                        {
-                           list.Add(person);
-                        }
-                    } else
-                    {
-                        list.Add(person);
+                        list.Add(_entity);
                     }
                 }
-                catch (InvalidPersonExeption)
+                else
                 {
-                    continue;
+                    list.Add(_entity);
                 }
+
+
             }
 
             return list;
         }
-
 
     }
 }

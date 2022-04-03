@@ -1,4 +1,6 @@
 ﻿using Eventator.DataContext.MsSqlServer;
+using Eventator.Domain.Entities;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace Eventator.Host
 {
-    public class Eventator
+    /*public class Eventator
     {
+        private readonly ServiceCollection _serviceCollection;
         private readonly MsSqlDataManager _dataManager;
 
         public Eventator(string connectionString)
@@ -126,6 +129,7 @@ namespace Eventator.Host
         public void BuyTicket(int scheduleId)
         {
             var _scheduleRep = new MsSqlScheduleRepository(_dataManager);
+            var _personRep = new MsSqlPersonRepository(_dataManager);
             var _schedule = _scheduleRep.GetById(scheduleId);
             if(_schedule.Tickets.Count() >= _schedule.MaxCapacity)
             {
@@ -145,7 +149,24 @@ namespace Eventator.Host
 
             } while (_toBuyTicketCount > _ticketCount);
 
-            Console.WriteLine("Успех");
+            var _person = new Person();
+            Console.WriteLine("Введите данные о покупателе");
+            _person.Name = Ask.String("Введите имя человека: ");
+            _person.Age = Ask.Int("Введите возраст человека: ");
+            _person.Email = Ask.String("Введите email человека: ");
+            _personRep.Add(_person);
+
+
+            for (int i = 0; i < _toBuyTicketCount; i++)
+            {
+                var _ticket = new Ticket();
+                _ticket.ScheduleId = scheduleId;
+                _ticket.PersonId = _person.Id;
+                _ticket.CreateOn = DateTime.Now;
+                _person.Tickets.Add(_ticket);
+            }
+
+            _personRep.Update(_person);
         }
-    }
+    }*/
 }

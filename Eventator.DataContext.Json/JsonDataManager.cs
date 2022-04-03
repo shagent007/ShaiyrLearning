@@ -1,4 +1,4 @@
-﻿using Eventator.DataContext.Json.Factories;
+﻿using Eventator.Domain;
 using Eventator.Domain.Entities;
 using Eventator.Domain.Exeptions;
 using System.Text;
@@ -15,12 +15,13 @@ namespace Eventator.DataContext.Json
         private readonly string _eventDirName;
         private readonly string _offerDirName;
 
-        public JsonDataManager(string rootDirName)
+        public JsonDataManager(ConnectionStringProvider provider)
         {
-            _personDirName = $@"{rootDirName}\Persons";
-            _scheduleDirName = $@"{rootDirName}\Schedules";
-            _eventDirName = $@"{rootDirName}\Events";
-            _offerDirName = $@"{rootDirName}\Offers";
+            var _rootDirName = provider.GetConnectionString();
+            _personDirName = $@"{_rootDirName}\Persons";
+            _scheduleDirName = $@"{_rootDirName}\Schedules";
+            _eventDirName = $@"{_rootDirName}\Events";
+            _offerDirName = $@"{_rootDirName}\Offers";
 
             var _directories = new List<string>()
             {
@@ -44,7 +45,7 @@ namespace Eventator.DataContext.Json
             return JsonSerializer.Serialize(person, new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
-                WriteIndented = true
+                WriteIndented = true,
             });
         }
         private string GetEntityDirName(string entityName) => entityName switch
@@ -52,10 +53,10 @@ namespace Eventator.DataContext.Json
             nameof(Person) => _personDirName,
             nameof(Schedule) => _scheduleDirName,
             nameof(Event) => _eventDirName,
-            nameof(Offer) => _offerDirName
+            nameof(Offer) => _offerDirName,
+            _ => throw new NotFoundExeption()
         };
         
-
         public void Add<EntityClass>(EntityClass entity) where EntityClass : Entity
         {
             var now = DateTime.Now;
@@ -97,75 +98,79 @@ namespace Eventator.DataContext.Json
             File.Delete($"{_dirName}/{enityId}.json");
         }
 
-        public Person GetPerson(string fieldName, string fieldValue)
+        public EntityClass GetEntity<EntityClass>(string fieldName, string fieldValue) where EntityClass : Entity
         {
-            var _factory = new PersonFactory();
-            var _files  = Directory.GetFiles(_personDirName);
+            var _dirName = GetEntityDirName(typeof(EntityClass).Name);
+            var _files = Directory.GetFiles(_dirName);
             if (_files.Length == 0)
-                throw new PersonNotFoundExeption();
-            Person? _person = null;
+                throw new FileNotFoundException();
+
+            EntityClass? _entity = null;
             foreach (string filePath in _files)
             {
-                try
+                using (FileStream fs = File.OpenRead(filePath))
                 {
-                    Person person = _factory.Create(filePath);
-                    string? value = person?.GetType()
-                        ?.GetProperty(fieldName)
-                        ?.GetValue(person, null)?.ToString();
-                    if (value == fieldValue)
-                    {
-                        _person = person;
-                    }
+                    byte[] buffer = new byte[fs.Length];
+                    fs.Read(buffer, 0, buffer.Length);
+                    string json = Encoding.Default.GetString(buffer);
+                    _entity = JsonSerializer.Deserialize<EntityClass>(json);
                 }
-                catch (InvalidPersonExeption)
+
+               
+
+                string? value = _entity?.GetType()
+                   ?.GetProperty(fieldName)
+                   ?.GetValue(_entity, null)?.ToString();
+
+                if (_entity != null && value == fieldValue)
                 {
-                    continue;
+                    return _entity;
                 }
-            }
-            if (_person == null)
-            {
-                throw new PersonNotFoundExeption();
             }
 
-            return _person;
+            throw new FileNotFoundException();
         }
 
-        public List<Person> GetPeople(string? fieldName=null, string? fieldValue=null)
+        public List<EntityClass> GetEntities<EntityClass>(string? fieldName = null, string? fieldValue = null) where EntityClass : Entity
         {
-            var _factory = new PersonFactory();
-            var list = new List<Person>();
-            var _files = Directory.GetFiles(_personDirName);
+            var list = new List<EntityClass>();
+            var _dirName = GetEntityDirName(typeof(EntityClass).Name);
+            var _files = Directory.GetFiles(_dirName);
             if (_files.Length == 0) return list;
-
             foreach (string filePath in _files)
             {
-                try
-                {
-                    Person person = _factory.Create(filePath);
+                EntityClass? _entity;
 
-                    if (fieldName != null && fieldValue != null)
+                using (FileStream fs = File.OpenRead(filePath))
+                {
+                    byte[] buffer = new byte[fs.Length];
+                    fs.Read(buffer, 0, buffer.Length);
+                    string json = Encoding.Default.GetString(buffer);
+                    _entity = JsonSerializer.Deserialize<EntityClass>(json);
+                }
+
+                if (_entity == null) continue;
+
+                if (fieldName != null && fieldValue != null)
+                {
+                    var value = _entity.GetType()
+                        ?.GetProperty(fieldName)
+                        ?.GetValue(_entity, null)?.ToString();
+                    if (value == fieldValue)
                     {
-                        var value = person.GetType()
-                            ?.GetProperty(fieldName)
-                            ?.GetValue(person, null)?.ToString();
-                        if (value == fieldValue)
-                        {
-                           list.Add(person);
-                        }
-                    } else
-                    {
-                        list.Add(person);
+                        list.Add(_entity);
                     }
                 }
-                catch (InvalidPersonExeption)
+                else
                 {
-                    continue;
+                    list.Add(_entity);
                 }
+
+
             }
 
             return list;
         }
-
 
     }
 }

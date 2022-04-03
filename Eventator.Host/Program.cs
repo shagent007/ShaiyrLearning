@@ -5,28 +5,47 @@ using Eventator.DataContext.MsSqlServer;
 using Eventator.DataContext.Json;
 using Eventator.Domain.Exeptions;
 using Eventator.DataContext.Xml;
+using Microsoft.Extensions.DependencyInjection;
+using Eventator.Domain.Repositories;
+using Eventator.Domain;
 
 namespace Eventator.Host
 {
+   
     partial class Program
     {
+
+       
+
         static void Main(string[] args)
         {
-            //  Eventator eventator = new Eventator("Data Source = 195.133.144.133, 49158; Database = Eventator_SHAIR; User ID = Shair; Password = 1234; TrustServerCertificate = true");
-            //  eventator.Start();
-            var _rootDir = @"D:\Документы\учёба\Eventator\Eventator.DataContext.Xml\Sources";
-            var _manager = new XmlDataManager(_rootDir);
-            var _rep = new XmlPersonPerository(_manager);
-           /*  var _person = new Person()
+            /*Eventator eventator = new Eventator("Data Source = 195.133.144.133, 49158; Database = Eventator_SHAIR; User ID = Shair; Password = 1234; TrustServerCertificate = true");
+            eventator.Start();*/
+            /**/
+
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddSingleton(new ConnectionStringProvider(@"D:\Документы\учёба\Eventator\Eventator.DataContext.Json\Sources"));
+            serviceCollection.BuildJsonStorage();
+            /*serviceCollection.BuildXmlStorage();
+            serviceCollection.BuildMsSqlStorage();*/
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+        
+            var _rep = serviceProvider.GetService<IPersonRepository>();
+             var _person = new Person()
              {
                  Name = "Аман",
                  Age = 24,
                  Email = "ilyz@gmail.com"
              };
-             _rep.Add(_person);
 
-            var people = _rep.GetList();
-            people.ForEach(p => Console.WriteLine($@"{p.Id}, {p.Name}, {p.Age}, {p.Email}"));*/
+            if(_rep != null)
+            {
+                _rep.Add(_person);
+                var people = _rep.GetList();
+                people.ForEach(p => Console.WriteLine($@"{p.Id}, {p.Name}, {p.Age}, {p.Email}"));
+            }
+            
 
             try
             {
@@ -41,7 +60,7 @@ namespace Eventator.Host
 
                 var _person = _rep.GetByEmail("lev@gmail.com");
                 Console.WriteLine($@"{_person.Id}, {_person.Name}, {_person.Age}, {_person.Email}");*/
-                _rep.Delete(46629004);
+               //_rep.Delete(46629004);
             }
             catch (PersonNotFoundExeption e)
             {

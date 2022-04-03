@@ -13,24 +13,38 @@ namespace Eventator.DataContext.Json
             _dataManager = dataManager;
         }
 
+        private Person LoadTickets(Person person)
+        {
+            var _tickets = _dataManager.GetEntities<Ticket>(nameof(Ticket.PersonId), person.Id.ToString());
+            foreach (var ticket in _tickets)
+            {
+                person.Tickets.Add(ticket);
+            }
+            return person;
+        }
+
         public Person GetById(int personId)
         {
-            return _dataManager.GetPerson(nameof(Person.Id), personId.ToString()); 
+            var _person = _dataManager.GetEntity<Person>(nameof(Person.Id), personId.ToString());
+            return LoadTickets(_person);
         }
 
         public List<Person> GetList()
         {
-            return _dataManager.GetPeople(); 
+            return _dataManager.GetEntities<Person>();
+
         }
 
         public Person GetByName(string name)
         {
-            return _dataManager.GetPerson(nameof(Person.Name), name);
+            var _person = _dataManager.GetEntity<Person>(nameof(Person.Name), name);
+            return LoadTickets(_person);
         }
 
         public Person GetByEmail(string email)
         {
-            return _dataManager.GetPerson(nameof(Person.Email), email);
+            var _person = _dataManager.GetEntity<Person>(nameof(Person.Email), email);
+            return LoadTickets(_person);
         }
 
         public void Add(Person model)

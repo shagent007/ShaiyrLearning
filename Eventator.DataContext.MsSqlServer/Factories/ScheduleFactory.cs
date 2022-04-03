@@ -9,11 +9,11 @@ namespace Eventator.DataContext.MsSqlServer.Factories
         public Schedule Create(SqlDataReader reader)
         {
             var _schedule = new Schedule();
-            _schedule.Id = reader.GetInt32(nameof(_schedule.Id));
-            _schedule.EventId = reader.GetInt32(nameof(_schedule.EventId));
-            _schedule.StartDate = reader.GetDateTime(nameof(_schedule.StartDate));
-            _schedule.MaxCapacity = reader.GetInt32(nameof(_schedule.MaxCapacity));
-            _schedule.Price = reader.GetDecimal(nameof(_schedule.Price));
+            _schedule.Id = reader.GetInt32(nameof(Schedule.Id));
+            _schedule.EventId = reader.GetInt32(nameof(Schedule.EventId));
+            _schedule.StartDate = reader.GetDateTime(nameof(Schedule.StartDate));
+            _schedule.MaxCapacity = reader.GetInt32(nameof(Schedule.MaxCapacity));
+            _schedule.Price = reader.GetDecimal(nameof(Schedule.Price));
             return _schedule;
         }
     }
